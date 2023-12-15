@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrapper {
+      width: 840px;
+      height: 450px;
+      background-color: pink;
+      padding: 100px 250px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <strong>抽奖</strong>
+    <h1>一等奖：<span id="one">???</span></h1>
+    <h3>二等奖：<span id="tow">???</span></h3>
+    <h5>三等奖：<span id="three">???</span></h5>
+  </div>
+  <script>
+    const peraonArr = ['刘德华', '周杰伦', 'pink老师']
+    let random = Math.floor(Math.random() * peraonArr.length)
+    // console.log(peraonArr[5])
+    const one = document.querySelector('#one')
+    one.innerHTML = peraonArr[random]
+    peraonArr.splice(random, 1)
+    // console.log(peraonArr);
+
+    random = Math.floor(Math.random() * peraonArr.length)
+    const tow = document.querySelector('#tow')
+    tow.innerHTML = peraonArr[random]
+    // console.log(peraonArr);
+    peraonArr.splice(random, 1)
+    // console.log(peraonArr);
+
+    random = Math.floor(Math.random() * peraonArr.length)
+    const three = document.querySelector('#three')
+    three.innerHTML = peraonArr[random]
+    // console.log(peraonArr);
+    peraonArr.splice(random, 1)
+    console.log(peraonArr);
+  </script>
+</body>
+
+</html>
